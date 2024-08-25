@@ -8,15 +8,17 @@ import { appicon } from '../assets/images';
 import ButtonComponent from '../components/ButtonComponent';
 
 const OtpScreen = ({ navigation }) => {
-    // Create refs for each OTP input
     const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
 
-    // Handle text change and focus on next input
     const handleTextChange = (text, index) => {
         if (text.length === 1 && index < inputRefs.length - 1) {
             inputRefs[index + 1].current.focus();
         }
     };
+
+    const onNavigate = () => {
+        navigation.navigate("PasswordScreen")
+    }
 
     return (
         <View style={styles.container}>
@@ -46,9 +48,9 @@ const OtpScreen = ({ navigation }) => {
 
                     <ButtonComponent
                         buttonValue="Verify"
-                        iconName="send"
+                        // iconName="send"
                         backgroundColor="black"
-                        onPress={() => console.log('Verify pressed')}
+                        onPress={onNavigate}
                         buttonContainerStyle={{ marginTop: 20 }}
                         buttonTextStyle={{ fontSize: 16 }}
                     />

@@ -7,6 +7,7 @@ import RegisterScreen from '../screens/RegisterScreen'
 import SplashScreen from '../screens/SplashScreen'
 import ForgotPasswordScreen from '../screens/ForgotPasswordScreen'
 import OtpScreen from '../screens/OtpScreen'
+import PasswordScreen from '../screens/PasswordScreen'
 
 
 const Stack = createNativeStackNavigator();
@@ -20,10 +21,10 @@ const Routes = () => {
                 <Stack.Screen name='RegisterScreen' component={RegisterScreen} />
                 <Stack.Screen name='ForgotPasswordScreen' component={ForgotPasswordScreen} />
                 <Stack.Screen name='OtpScreen' component={OtpScreen} />
+                <Stack.Screen name='PasswordScreen' component={PasswordScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     )
 }
 
 export default Routes
-

@@ -67,11 +67,13 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
     textInput: {
-        borderBottomWidth: 1,
+        borderWidth: 1,
         borderColor: '#ccc',
-        paddingVertical: 5,
-        // paddingHorizontal: 40, 
+        borderRadius: 7,
+        paddingVertical: 10,
+        paddingHorizontal: 15,
         fontSize: 16,
+        backgroundColor: '#f5f5f5',
     },
     eyeIcon: {
         position: 'absolute',
@@ -82,4 +84,3 @@ const styles = StyleSheet.create({
 });
 
 export default TextInputComponent;
-
